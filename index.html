@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Insurance Solutions - Sohail Khan, Your Trusted Partner</title>
+  <meta name="description" content="Complete Insurance Solutions — Expert insurance consultation, best coverage options, and end-to-end claim settlement support for individuals, families and businesses across India.">
+  <meta name="theme-color" content="#0F3460">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+<!-- ════════════════════════════════════════════════════════════
+     FLOATING WHATSAPP BUTTON
+════════════════════════════════════════════════════════════ -->
+<a id="wa-float" href="#" class="wa-link" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- ════════════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════════ -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Wordmark -->
+      <a href="#" class="flex items-center gap-2.5 shrink-0 group">
+        <div class="w-9 h-9 rounded-xl flex items-center justify-center text-white flex-shrink-0"
+             style="background: linear-gradient(135deg, #0F3460, #16A085)">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+          </svg>
+        </div>
+        <div class="leading-tight">
+          <div class="font-bold text-sm text-gray-900 leading-tight">Complete Insurance</div>
+          <div class="text-xs font-semibold leading-tight" style="color:#16A085">Solutions</div>
+        </div>
+      </a>
+
+      <!-- Desktop nav links -->
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-600">
+        <a href="#services" class="hover:text-gray-900 transition-colors" data-i18n="navServices">Services</a>
+        <a href="#why-us"   class="hover:text-gray-900 transition-colors" data-i18n="navWhyUs">Why Us</a>
+        <a href="#process"  class="hover:text-gray-900 transition-colors" data-i18n="navProcess">Process</a>
+        <a href="#contact"  class="hover:text-gray-900 transition-colors" data-i18n="navContact">Contact</a>
+      </div>
+
+      <!-- Right side: lang toggle + WA CTA + hamburger -->
+      <div class="flex items-center gap-2">
+        <button id="lang-toggle"
+                onclick="setLang(currentLang === 'en' ? 'hi' : 'en')"
+                class="text-xs font-semibold px-3 py-1.5 rounded-lg border border-gray-200 hover:border-gray-400 hover:bg-gray-50 transition-all text-gray-700">
+          हिंदी
+        </button>
+
+        <!-- WA CTA – desktop only -->
+        <a href="#" class="wa-link hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-white text-sm font-semibold hover:opacity-90 transition-opacity"
+           style="background:#25D366" target="_blank" rel="noopener">
+          <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          <span data-i18n="navWhatsapp">Chat on WhatsApp</span>
+        </a>
+
+        <!-- Hamburger – mobile only -->
+        <button onclick="toggleMenu()" class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors" aria-label="Toggle navigation">
+          <span id="icon-bars" class="block w-5 h-5">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+            </svg>
+          </span>
+          <span id="icon-x" class="hidden block w-5 h-5">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white px-4 py-4 space-y-1">
+    <a href="#services" class="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 transition-colors" data-i18n="navServices">Services</a>
+    <a href="#why-us"   class="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 transition-colors" data-i18n="navWhyUs">Why Us</a>
+    <a href="#process"  class="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 transition-colors" data-i18n="navProcess">Process</a>
+    <a href="#contact"  class="block px-3 py-2.5 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50 transition-colors" data-i18n="navContact">Contact</a>
+    <a href="#" class="wa-link flex items-center justify-center gap-2 mt-2 px-4 py-3 rounded-xl text-white text-sm font-semibold"
+       style="background:#25D366" target="_blank" rel="noopener" data-i18n="navWhatsapp">Chat on WhatsApp</a>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════ -->
+<section id="hero" class="hero-bg min-h-screen flex items-center pt-16 relative overflow-hidden">
+  <!-- Decorative orbs -->
+  <div class="pointer-events-none absolute inset-0 overflow-hidden">
+    <div class="absolute -top-32 -right-32 w-80 h-80 rounded-full opacity-10" style="background:#16A085"></div>
+    <div class="absolute bottom-10 -left-24 w-64 h-64 rounded-full opacity-5" style="background:#16A085"></div>
+    <div class="absolute top-1/2 left-1/4 w-48 h-48 rounded-full opacity-5" style="background:#fff"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 w-full py-16 lg:py-24">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Left: copy -->
+      <div class="text-white">
+        <!-- Tagline badge -->
+        <div class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium mb-6"
+             style="background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2)">
+          <span class="w-2 h-2 rounded-full flex-shrink-0" style="background:#4ade80"></span>
+          <span data-i18n="heroTagline">Expert Consultation · Best Coverage · Hassle-Free Claims</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="font-extrabold leading-tight mb-6" style="font-size:clamp(2.5rem,5vw,3.75rem)">
+          <span data-i18n="heroLine1">Your Complete</span><br>
+          <span style="color:#4ade80" data-i18n="heroLine2">Insurance</span>
+          <span data-i18n="heroLine3"> Partner</span>
+        </h1>
+
+        <!-- Sub -->
+        <p class="text-lg mb-8 leading-relaxed max-w-lg" style="color:rgba(255,255,255,.8)" data-i18n="heroSub">
+          From expert advice to hassle-free claim settlement — we stay with you every step of the way.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#" class="wa-link inline-flex items-center justify-center gap-3 px-7 py-4 rounded-2xl text-white font-bold text-base shadow-lg hover:opacity-90 transition-opacity"
+             style="background:#25D366" target="_blank" rel="noopener">
+            <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span data-i18n="heroCta1">Get Free Consultation</span>
+          </a>
+          <a href="#services" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl font-semibold text-base text-white transition-all"
+             style="border:2px solid rgba(255,255,255,.35)" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='transparent'">
+            <span data-i18n="heroCta2">Our Services</span>
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/>
+            </svg>
+          </a>
+        </div>
+
+        <p class="mt-8 text-sm" style="color:rgba(255,255,255,.55)" data-i18n="heroTrust">
+          Trusted by 1000+ clients across India
+        </p>
+      </div>
+
+      <!-- Right: family photo -->
+      <div class="hidden lg:flex justify-center items-center">
+        <div class="relative">
+          <div class="absolute inset-0 rounded-3xl" style="background:linear-gradient(135deg,rgba(22,160,133,.2),rgba(15,52,96,.2));z-index:1;border-radius:1.5rem;"></div>
+          <img src="Images/website image/images/IMAGE 1.jpg"
+               alt="Happy family protected by insurance"
+               class="rounded-3xl shadow-2xl object-cover object-top relative"
+               style="max-height:22rem;max-width:26rem;width:100%;z-index:0;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     STATS BAR
+════════════════════════════════════════════════════════════ -->
+<section class="stats-bg py-12 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      <div>
+        <div class="text-4xl font-extrabold mb-1" data-i18n="stat1Val">15+</div>
+        <div class="text-sm font-medium" style="color:rgba(255,255,255,.75)" data-i18n="stat1Lbl">Years Experience</div>
+      </div>
+      <div>
+        <div class="text-4xl font-extrabold mb-1" data-i18n="stat2Val">1000+</div>
+        <div class="text-sm font-medium" style="color:rgba(255,255,255,.75)" data-i18n="stat2Lbl">Satisfied Clients</div>
+      </div>
+      <div>
+        <div class="text-4xl font-extrabold mb-1" data-i18n="stat3Val">9</div>
+        <div class="text-sm font-medium" style="color:rgba(255,255,255,.75)" data-i18n="stat3Lbl">Insurance Types</div>
+      </div>
+      <div>
+        <div class="text-4xl font-extrabold mb-1" data-i18n="stat4Val">100%</div>
+        <div class="text-sm font-medium" style="color:rgba(255,255,255,.75)" data-i18n="stat4Lbl">Claim Support</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     SERVICES
+════════════════════════════════════════════════════════════ -->
+<section id="services" class="py-20" style="background:#f8fafc">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-14 fade-in">
+      <p class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#16A085" data-i18n="servicesSub">What We Offer</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" data-i18n="servicesTitle">Our Insurance Services</h2>
+      <p class="text-gray-500 max-w-xl mx-auto" data-i18n="servicesDesc">Comprehensive coverage solutions for individuals, families &amp; businesses</p>
+    </div>
+    <div id="services-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 fade-in">
+      <!-- Rendered by script.js renderServices() -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     WHY CHOOSE US
+════════════════════════════════════════════════════════════ -->
+<section id="why-us" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Image -->
+      <div class="hidden lg:block fade-in">
+        <div class="rounded-3xl overflow-hidden shadow-xl">
+          <img src="Images/website image/images/WhatsApp Image 2026-06-13 at 1.47.48 PM.jpeg"
+               alt="Why choose an insurance broker"
+               class="w-full object-cover" style="max-height:28rem;">
+        </div>
+      </div>
+
+      <!-- USPs -->
+      <div class="fade-in">
+        <p class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#16A085" data-i18n="whyusSub">Our Advantage</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-3" data-i18n="whyusTitle">Why Choose Us</h2>
+        <p class="text-gray-500 mb-8" data-i18n="whyusDesc">Because insurance is not just about buying a policy</p>
+        <div id="whyus-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-1">
+          <!-- Rendered by script.js renderWhyUs() -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     OUR PROCESS
+════════════════════════════════════════════════════════════ -->
+<section id="process" class="py-20" style="background:#f8fafc">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-14 fade-in">
+      <p class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#16A085" data-i18n="processSub">How It Works</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-3" data-i18n="processTitle">Our Process</h2>
+      <p class="text-gray-500" data-i18n="processDesc">Simple, transparent &amp; customer-focused</p>
+    </div>
+    <div id="process-steps" class="fade-in">
+      <!-- Rendered by script.js renderProcess() -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     FINAL CTA
+════════════════════════════════════════════════════════════ -->
+<section id="contact" class="cta-bg py-24 text-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center fade-in">
+    <!-- Shield icon -->
+    <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-8 mx-auto"
+         style="background:rgba(255,255,255,.12)">
+      <svg class="w-8 h-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+      </svg>
+    </div>
+    <h2 class="text-3xl sm:text-4xl font-extrabold mb-4" data-i18n="ctaTitle">Secure Your Future Today</h2>
+    <p class="text-lg mb-10 max-w-xl mx-auto" style="color:rgba(255,255,255,.75)" data-i18n="ctaDesc">
+      Connect with our insurance experts for personalised solutions.
+    </p>
+    <a href="#" class="wa-link inline-flex items-center gap-3 px-9 py-4 rounded-2xl text-white font-bold text-lg shadow-xl hover:opacity-90 transition-opacity"
+       style="background:#25D366" target="_blank" rel="noopener">
+      <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      <span data-i18n="ctaBtn">Chat on WhatsApp Now</span>
+    </a>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer style="background:#0f172a; color:#94a3b8;" class="pt-14 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-2.5 mb-4">
+          <div class="w-9 h-9 rounded-xl flex items-center justify-center text-white flex-shrink-0"
+               style="background:linear-gradient(135deg,#0F3460,#16A085)">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+            </svg>
+          </div>
+          <span class="font-bold text-white text-sm">Complete Insurance Solutions</span>
+        </div>
+        <p class="text-sm leading-relaxed" data-i18n="footerTagline">
+          Sales Se Claim Settlement Tak — Aapka Trusted Insurance Partner
+        </p>
+      </div>
+
+      <!-- Quick links -->
+      <div>
+        <h4 class="font-semibold text-white text-sm mb-4" data-i18n="footerLinks">Quick Links</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#services" class="hover:text-teal-400 transition-colors" data-i18n="navServices">Services</a></li>
+          <li><a href="#why-us"   class="hover:text-teal-400 transition-colors" data-i18n="navWhyUs">Why Us</a></li>
+          <li><a href="#process"  class="hover:text-teal-400 transition-colors" data-i18n="navProcess">Process</a></li>
+          <li><a href="#contact"  class="hover:text-teal-400 transition-colors" data-i18n="navContact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="font-semibold text-white text-sm mb-4" data-i18n="footerContact">Contact Us</h4>
+        <a href="https://wa.me/919920877751" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-3 text-sm hover:text-green-400 transition-colors mb-3">
+          <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          <span data-i18n="footerPhone">+91 99208 77751</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs" style="border-color:#1e293b">
+      <span data-i18n="footerCopy">© 2025 Complete Insurance Solutions. All rights reserved.</span>
+      <span class="text-center" data-i18n="footerNote">Insurance is subject to market risks. Please read the policy document carefully.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
