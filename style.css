@@ -286,3 +286,244 @@ footer a:hover { color: #16B364; }
 
 /* ── Utility: visually hidden ─────────────────────────────────────────────── */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+/* Mobile polish */
+@media (max-width: 640px) {
+  html { scroll-padding-top: 4rem; }
+  body { padding-bottom: 4.75rem; }
+
+  #navbar .h-16 { height: 4rem; }
+  #navbar .px-4 { padding-left: 1rem; padding-right: 1rem; }
+  #lang-toggle { padding: 0.35rem 0.625rem; }
+
+  #hero {
+    min-height: auto !important;
+    align-items: flex-start;
+  }
+  #hero .max-w-7xl {
+    padding-top: 3.25rem !important;
+    padding-bottom: 3.75rem !important;
+  }
+  #hero .grid {
+    display: block !important;
+  }
+  #hero h1 {
+    font-size: 2.42rem !important;
+    line-height: 1.08 !important;
+    margin-bottom: 1rem !important;
+  }
+  #hero p.text-lg {
+    font-size: 1rem !important;
+    line-height: 1.58 !important;
+    margin-bottom: 1.35rem !important;
+  }
+  #hero .inline-flex.rounded-full {
+    max-width: 100%;
+    white-space: normal;
+    align-items: flex-start;
+    font-size: 0.8125rem !important;
+    line-height: 1.3;
+    margin-bottom: 1.25rem !important;
+  }
+  #hero .flex.flex-col {
+    gap: 0.75rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+  #hero .flex.flex-col a {
+    width: 100%;
+    min-height: 3.25rem;
+    padding: 0.875rem 1rem !important;
+  }
+
+  .stats-bg { padding-top: 1.35rem !important; padding-bottom: 1.35rem !important; }
+  .stats-bg .grid { gap: 1.125rem !important; }
+  .stats-bg [data-i18n$="Val"] { font-size: 1.75rem !important; }
+  .stats-bg [data-i18n$="Lbl"] { font-size: 0.8125rem !important; }
+
+  section { scroll-margin-top: 4rem; }
+  #insurers,
+  #services,
+  #why-us,
+  #process,
+  #contact {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+  #insurers .grid,
+  #why-us .grid {
+    display: block !important;
+  }
+  #insurers h2,
+  #services h2,
+  #why-us h2,
+  #process h2,
+  #contact h2 {
+    font-size: 2rem !important;
+    line-height: 1.16 !important;
+  }
+  #insurers p,
+  #services p,
+  #why-us p,
+  #process p {
+    font-size: 0.96875rem !important;
+  }
+
+  .insurer-chip-grid {
+    gap: 0.5rem;
+    margin-bottom: 1rem !important;
+  }
+  .insurer-chip {
+    min-height: 2.125rem;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+  .insurer-note {
+    max-width: none;
+    font-size: 0.78125rem !important;
+    margin-bottom: 1.5rem;
+  }
+  .insurer-gallery {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(15.5rem, 78%);
+    grid-template-columns: none;
+    gap: 0.875rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    padding: 0.25rem 1rem 0.85rem 0;
+    margin-right: -1rem;
+  }
+  .insurer-proof-card,
+  .insurer-proof-card.featured {
+    grid-column: auto;
+    scroll-snap-align: start;
+  }
+  .insurer-proof-card img,
+  .insurer-proof-card.featured img {
+    height: 9.75rem;
+  }
+  .insurer-proof-card figcaption {
+    padding: 0.625rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+
+  #services .text-center {
+    margin-bottom: 2rem !important;
+  }
+  #services-grid {
+    gap: 1rem !important;
+  }
+  .service-card {
+    padding: 1.125rem;
+    border-radius: 0.875rem;
+  }
+  .svc-icon {
+    width: 2.65rem;
+    height: 2.65rem;
+    margin-bottom: 0.875rem;
+  }
+  .svc-name {
+    font-size: 1.0625rem;
+  }
+  .svc-desc {
+    margin-bottom: 0.75rem;
+  }
+  .svc-benefits {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .svc-benefits li {
+    font-size: 0.84375rem;
+  }
+  .svc-benefits li:nth-child(n+4) {
+    display: none;
+  }
+  .enquire-btn {
+    padding: 0.7rem 0.875rem;
+  }
+
+  #whyus-grid {
+    gap: 0.875rem !important;
+  }
+  .why-item {
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid #EAEFF3;
+    border-radius: 0.875rem;
+    background: #fff;
+  }
+  .why-icon {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+  .why-text {
+    font-size: 0.875rem;
+    padding-top: 0.25rem;
+  }
+
+  #process .text-center {
+    margin-bottom: 2rem !important;
+  }
+  #process-steps {
+    gap: 1rem;
+  }
+  .step-item {
+    align-items: flex-start;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    column-gap: 0.875rem;
+    padding: 1rem;
+    border: 1px solid #EAEFF3;
+    border-radius: 0.875rem;
+    background: #fff;
+  }
+  .step-num {
+    width: 2.75rem;
+    height: 2.75rem;
+    margin: 0;
+    font-size: 0.9375rem;
+    grid-row: span 2;
+  }
+  .step-title {
+    font-size: 0.9375rem;
+    margin-bottom: 0.25rem;
+  }
+  .step-desc {
+    font-size: 0.8125rem;
+  }
+
+  #contact .max-w-3xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  #contact .wa-link {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem !important;
+  }
+
+  footer {
+    padding-bottom: 5.5rem !important;
+  }
+  footer .grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  footer .border-t {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  #wa-float {
+    width: 3.25rem;
+    height: 3.25rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+  #wa-float svg {
+    width: 1.65rem;
+    height: 1.65rem;
+  }
+}
